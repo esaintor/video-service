@@ -29,7 +29,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .antMatchers("/api/principal/**")
                 .access("#oauth2.clientHasRole('ROLE_ADMIN')")
                 .antMatchers("/api/hello/**")
-                .access("#oauth2.clientHasRole('ROLE_USER')");
+                .access("#oauth2.clientHasRole('ROLE_USER')")
+                .antMatchers("/content/**")
+                .permitAll();
+//                .and().logout();
     }
 
     @Override
