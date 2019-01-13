@@ -28,7 +28,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/api/principal/**")
                 .access("#oauth2.clientHasRole('ROLE_ADMIN')")
-                .antMatchers("/api/hello/**")
+                .antMatchers("/api/hello/**", "/api/me/**")
                 .access("#oauth2.clientHasRole('ROLE_USER')")
                 .antMatchers("/content/**")
                 .permitAll();
