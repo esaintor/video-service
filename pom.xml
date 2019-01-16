@@ -11,6 +11,7 @@
 	<groupId>mn.saga</groupId>
 	<artifactId>vstream</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>vstream</name>
 	<description>Video Streaming Service for MNG</description>
 
